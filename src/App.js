@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import PageLayout from "./layout/PageLayout";
+import Dashboard from "./features/Dashboard/Dashboard";
+import AddEditTask from "./features/AddEditTask/AddEditTask";
+import TaskDetails from "./features/TaskDetails/TaskDetails";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<PageLayout />}>
+          <Route path="/tasks" element={<Dashboard />} />
+          <Route path="/tasks/add" element={<AddEditTask />} />
+          <Route path="/tasks/:taskId/edit" element={<AddEditTask />} />
+          <Route path="/tasks/:taskId/details" element={<TaskDetails />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
