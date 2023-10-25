@@ -1,9 +1,9 @@
-import { Link, Outlet } from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 
 function Header() {
-  return (
-    <header>
-      <nav>
+    return (
+        <header>
+            {/*<nav>
         <ul>
           <li>
             <Link to={"/tasks"}> Tasks</Link>{" "}
@@ -18,23 +18,23 @@ function Header() {
             <Link to={"/tasks/add"}> Add Task</Link>{" "}
           </li>
         </ul>
-      </nav>
-    </header>
-  );
+      </nav>*/}
+        </header>
+    );
 }
 
 function Footer() {
-  return <footer>Footer</footer>;
+    return <footer>Footer</footer>;
 }
 
-export default function PageLayout({ children }) {
-  return (
-    <div>
-      <Header />
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
-    </div>
-  );
+export default function PageLayout({children}) {
+    return (
+        <div>
+            <Header/>
+            <main>
+                <Outlet/>
+            </main>
+            <Footer/>
+        </div>
+    );
 }
