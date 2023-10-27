@@ -1,22 +1,23 @@
-import {Button} from "@mui/material";
-import {useState} from "react";
-import './create-task.css';
+import { Button } from "@mui/material";
+import { useState } from "react";
+import "./create-task.css";
 import AddEditTask from "../../features/AddEditTask/AddEditTask";
 
-
 export default function CreateTask(props) {
-    const [showModal, setShowModal] = useState(false);
-    if (showModal) {
-        return <AddEditTask {...props} setShowModal={setShowModal}/>
-    }
+  const [showModal, setShowModal] = useState(false);
+  if (showModal) {
+    return <AddEditTask {...props} setShowModal={setShowModal} />;
+  }
 
-    return <div className="create-task">
-        <Button
-            variant="contained"
-            fullWidth
-            onClick={() => setShowModal(!showModal)
-            }>
-            Add Task
-        </Button>
+  return (
+    <div className="create-task">
+      <Button
+        variant="contained"
+        fullWidth
+        onClick={() => setShowModal(!showModal)}
+      >
+        Add Task
+      </Button>
     </div>
+  );
 }
