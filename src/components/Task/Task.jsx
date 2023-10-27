@@ -38,6 +38,7 @@ export default function Task({ task, onClick, onDelete }) {
       </CardContent>
       <CardActions>
         <Button
+          data-testid="delete-button"
           size="small"
           sx={{
             position: "absolute",

@@ -1,6 +1,6 @@
 import { Button, TextField } from "@mui/material";
 import "./createColumn.css";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 export default function CreateColumn({ onAddColumn }) {
   const [column, setColumn] = useState("");
@@ -17,8 +17,11 @@ export default function CreateColumn({ onAddColumn }) {
         value={column}
         onChange={(e) => setColumn(e.target.value)}
       />
-
-      <Button variant="contained" onClick={onSubmit}>
+      <Button
+        data-testid="add-column-button"
+        variant="contained"
+        onClick={onSubmit}
+      >
         Add Column
       </Button>
     </div>

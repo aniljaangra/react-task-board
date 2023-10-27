@@ -12,6 +12,7 @@ export default function CreateTask(props) {
   return (
     <div className="create-task">
       <Button
+        data-testid="add-task-button"
         variant="contained"
         fullWidth
         onClick={() => setShowModal(!showModal)}

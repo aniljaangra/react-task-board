@@ -70,6 +70,7 @@ export default function AddEditTask({
           variant="contained"
           size="large"
           fullWidth
+          data-testid={`${task ? "update" : "add"}-task`}
           onClick={handleSubmit}
           disabled={!taskName || !taskDescription || !deadline}
         >
