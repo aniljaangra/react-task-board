@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import PageLayout from "./layout/PageLayout";
 import Dashboard from "./features/Dashboard/Dashboard";
 function App() {
@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<PageLayout />}>
+          <Route index element={<Navigate to="/tasks" replace />} />
           <Route path="/tasks" element={<Dashboard />} />
         </Route>
       </Routes>

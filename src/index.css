@@ -29,7 +29,7 @@ code {
   gap: 1rem;
 }
 .column-task-list {
-  overflow: scroll;
+  overflow-y: auto;
   padding-bottom: 2rem;
 }
 
